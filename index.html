@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>resume parser</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body ng-app="mainApp">
+    <nav class="navbar black-background">
+      <div class="row ">
+        <div class="col-md-12 text-center navbar-text">
+          Resume Parser
+        </div>
+      </div>
+    </nav>
+    <div ng-controller="homeCtrl">
+     <form novalidate="">
+       <div class="row">
+         <div class="col-md-12 text-center navbar-text">
+           <input  name="file" id="file" class="inputfile"  type="file" on-read-file="displayFileContents(contents)" />
+           <label ng-hide="hideButton" for="file">Upload Resume</label>
+           <input  name="file" id="file" class="inputfile"  type="file" on-read-file="displayFileContents(contents)" />
+           <label ng-show="hideButton" for="file">Parse another</label>
+         </div>
+       </div>
+
+      <div class="row" style="min-height:25vh">
+        <pre class="col-md-3 contact-containers" ng-repeat="contactItem in contactItems">
+          {{contactItem.content}}
+        </pre>
+      </div>
+      <div class="row" style="min-height:25vh">
+        <pre class="col-md-7 col-md-offset-3 info-containers" ng-repeat="infoItem in infoItems">
+          {{infoItem.content}}
+        </pre>
+      </div>
+     </form>
+  </div>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

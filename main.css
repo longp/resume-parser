@@ -1,0 +1,63 @@
+
+.black-background {
+  background-color: #4CBBD1;
+  color:white;
+  font-size:2.5em;
+}
+
+.resume-btn {
+  background-color: #194664;
+}
+
+.inputfile {
+	width: 10vw;
+	height: 10vh;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    text-align: center;
+    width: 15vw;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    outline: #194664 solid thick;
+    background-color:#194664;
+    display: inline-block;
+}
+
+inputfile + label * {
+	pointer-events: none;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    color:#194664;
+    outline: #194664 solid thick;
+    background-color:white;
+}
+
+.contact-containers {
+  background-color: #194664;
+  color:white;
+  height:10vh;
+  display: flex;
+  white-space: normal;
+  word-break: break-word;
+}
+.info-containers {
+  background-color: #4CBBD1;
+  font-style: bold;
+  color:black;
+  height:auto;
+  overflow-x: auto;
+
+}
+pre {
+   word-break: auto;
+  white-space: pre-line;
+}
